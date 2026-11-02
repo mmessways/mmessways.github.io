@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#111111">
+    <meta name="description"
+        content="Grille tarifaire MESSWAYS : trainings numériques individuels, séances de 90 minutes et packs mensuels.">
+    <title>Tarifs des trainings spécialisés — MESSWAYS</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .price-hero {
+            background: #111;
+            color: #fff;
+            padding: 85px 9% 75px
+        }
+
+        .price-hero .kicker {
+            color: #aaa
+        }
+
+        .price-hero h1 {
+            font: 800 clamp(48px, 7vw, 82px)/1 var(--display);
+            letter-spacing: -.075em;
+            margin: 28px 0
+        }
+
+        .price-hero h1 em {
+            color: #e32636;
+            font-style: normal
+        }
+
+        .price-hero p {
+            max-width: 650px;
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.9
+        }
+
+        .price-wrap {
+            padding: 75px 9%;
+        }
+
+        .price-wrap h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin: 15px 0 24px
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 55px;
+            background: #fff
+        }
+
+        .price-table th,
+        .price-table td {
+            text-align: left;
+            padding: 19px 16px;
+            border-bottom: 1px solid #e5e5e0;
+            font-size: 12px;
+            vertical-align: top
+        }
+
+        .price-table th {
+            background: #111;
+            color: #fff;
+            font-size: 9px;
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+        .price-table td strong {
+            font: 750 18px Manrope;
+            white-space: nowrap
+        }
+
+        .price-table tr:hover td {
+            background: #f3f3ef
+        }
+
+        .price-note {
+            padding: 24px;
+            background: #efefeb;
+            font-size: 12px;
+            line-height: 1.9;
+            color: #666
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 25px 0 55px
+        }
+
+        .schedule article {
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #e2e2dc
+        }
+
+        .schedule b {
+            display: block;
+            font: 800 34px Manrope;
+            letter-spacing: -.05em;
+            margin: 12px 0
+        }
+
+        .schedule small {
+            font-size: 9px;
+            letter-spacing: .12em;
+            color: #999
+        }
+
+        .price-cta {
+            background: #e32636;
+            color: #fff;
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            margin-top: 45px
+        }
+
+        .price-cta p {
+            margin: 0;
+            font-size: 13px;
+            max-width: 560px;
+            line-height: 1.8
+        }
+
+        .price-cta a {
+            background: #111;
+            color: #fff;
+            padding: 15px 19px;
+            font-size: 11px;
+            white-space: nowrap;
+            font-weight: 700
+        }
+
+        .lang-switch {
+            border: 1px solid #ccc;
+            background: transparent;
+            padding: 8px 12px;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .en {
+            display: none
+        }
+
+        body.english .fr {
+            display: none
+        }
+
+        body.english .en {
+            display: block
+        }
+
+        body.english .price-table .en {
+            display: table-cell
+        }
+
+        body.english .price-table .fr {
+            display: none
+        }
+
+        @media(max-width:700px) {
+
+            .price-hero,
+            .price-wrap {
+                padding: 60px 7%
+            }
+
+            .price-table {
+                display: block;
+                overflow-x: auto
+            }
+
+            .schedule {
+                grid-template-columns: 1fr
+            }
+
+            .price-cta {
+                align-items: flex-start;
+                flex-direction: column
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topline"><i></i><span class="fr">TARIFS TRANSPARENTS · TRAININGS INDIVIDUELS</span><span
+            class="en">CLEAR PRICING · ONE-TO-ONE TRAINING</span></div>
+    <header class="site-header"><a class="logo" href="index.html"><span
+                class="wordmark"><span>mess</span><b>ways</b></span></a>
+        <nav><a href="index.html#formations"><span class="fr">Trainings</span><span class="en">Training</span></a><a
+                href="index.html#contact">Contact</a></nav>
+        <div class="nav-right"><button class="lang-switch" id="lang">EN</button><a class="navbutton"
+                href="index.html#contact"><span class="fr">Demander un training ↗</span><span class="en">Enquire about
+                    training ↗</span></a></div>
+    </header>
+    <main>
+        <section class="price-hero"><small class="kicker fr">INVESTISSEZ DANS UNE COMPÉTENCE CONCRÈTE</small><small
+                class="kicker en">INVEST IN A PRACTICAL SKILL</small>
+            <h1 class="fr">Des tarifs clairs.<br><em>Une vraie progression.</em></h1>
+            <h1 class="en">Clear pricing.<br><em>Real progress.</em></h1>
+            <p class="fr">MESSWAYS propose des trainings spécialisés et individuels pour développer des compétences
+                numériques précises. Vous ne vous inscrivez pas dans une école : vous nous contactez pour un
+                accompagnement ciblé, adapté à votre niveau, votre activité et vos objectifs.</p>
+            <p class="en">MESSWAYS delivers specialised one-to-one digital skills training. This is not school
+                enrolment: you contact us for focused coaching shaped around your level, work and goals.</p>
+        </section>
+        <section class="price-wrap" id="seance"><small class="kicker fr">01 / SÉANCES À LA CARTE</small><small
+                class="kicker en">01 / INDIVIDUAL SESSIONS</small>
+            <h2 class="fr">Une séance ciblée de 90 minutes</h2>
+            <h2 class="en">A focused 90-minute session</h2>
+            <p class="fr">Pour apprendre une fonction, résoudre une difficulté ou obtenir une aide spécialisée sur un
+                outil précis.</p>
+            <p class="en">Learn a specific feature, solve a problem or get specialist help with a particular tool.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th><span class="fr">Domaine de training</span><span class="en">Training area</span></th>
+                        <th><span class="fr">Durée</span><span class="en">Duration</span></th>
+                        <th><span class="fr">Tarif / séance</span><span class="en">Price / session</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="fr">Informatique & maîtrise de l’ordinateur</span><span class="en">Computer
+                                skills</span></td>
+                        <td>90 min</td>
+                        <td><strong>7 000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Office & bureautique</td>
+                        <td>90 min</td>
+                        <td><strong>8 000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Design graphique & Adobe Creative Cloud</td>
+                        <td>90 min</td>
+                        <td><strong>10 000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="fr">Internet & outils numériques</span><span class="en">Internet & digital
+                                tools</span></td>
+                        <td>90 min</td>
+                        <td><strong>7 000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="fr">Intelligence artificielle & IA générative</span><span class="en">Artificial
+                                intelligence & generative AI</span></td>
+                        <td>90 min</td>
+                        <td><strong>9 000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="fr">Création web & programmation</span><span class="en">Web development &
+                                programming</span></td>
+                        <td>90 min</td>
+                        <td><strong>11 000 FCFA</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="mensuel"><small class="kicker fr">02 / PACKS MENSUELS — RECOMMANDÉS</small><small
+                    class="kicker en">02 / MONTHLY PACKAGES — RECOMMENDED</small>
+                <h2 class="fr">18 heures de coaching par mois</h2>
+                <h2 class="en">18 hours of coaching per month</h2>
+                <p class="fr">Le rythme conseillé : 3 séances par semaine, 90 minutes par séance, pendant 4 semaines.
+                    Soit 12 séances individuelles et 18 heures de pratique accompagnée.</p>
+                <p class="en">Our recommended rhythm: 3 sessions per week, 90 minutes each, over 4 weeks. That is 12
+                    one-to-one sessions and 18 hours of guided practice.</p>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th><span class="fr">Programme</span><span class="en">Programme</span></th>
+                            <th><span class="fr">Durée indicative</span><span class="en">Suggested duration</span></th>
+                            <th><span class="fr">Heures</span><span class="en">Hours</span></th>
+                            <th><span class="fr">Prix mensuel</span><span class="en">Monthly price</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Informatique & maîtrise de l’ordinateur</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>60 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Office & bureautique</td>
+                            <td>2 mois</td>
+                            <td>36 h</td>
+                            <td><strong>75 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Design graphique & Adobe Creative Cloud</td>
+                            <td>3 mois</td>
+                            <td>54 h</td>
+                            <td><strong>100 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Internet & outils numériques</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>65 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence artificielle & IA générative</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>85 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Création web & programmation</td>
+                            <td>3 mois</td>
+                            <td>54 h</td>
+                            <td><strong>110 000 FCFA</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="complet"><small class="kicker fr">03 / PROGRAMMES COMPLETS</small><small class="kicker en">03 /
+                    COMPLETE PROGRAMMES</small>
+                <h2 class="fr">Le parcours structuré, du début à la pratique</h2>
+                <h2 class="en">A structured path from foundations to practice</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th><span class="fr">Training spécialisé</span><span class="en">Specialised training</span>
+                            </th>
+                            <th><span class="fr">Durée indicative</span><span class="en">Suggested duration</span></th>
+                            <th><span class="fr">Volume total</span><span class="en">Total hours</span></th>
+                            <th><span class="fr">Prix complet</span><span class="en">Full price</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Informatique & maîtrise de l’ordinateur</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>60 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Office & bureautique</td>
+                            <td>2 mois</td>
+                            <td>36 h</td>
+                            <td><strong>150 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Design graphique & Adobe Creative Cloud</td>
+                            <td>3 mois</td>
+                            <td>54 h</td>
+                            <td><strong>300 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Internet & outils numériques</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>65 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence artificielle & IA générative</td>
+                            <td>1 mois</td>
+                            <td>18 h</td>
+                            <td><strong>85 000 FCFA</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Création web & programmation</td>
+                            <td>3 mois</td>
+                            <td>54 h</td>
+                            <td><strong>330 000 FCFA</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="schedule">
+                <article><small class="fr">FRÉQUENCE</small><small class="en">FREQUENCY</small><b>3×</b>
+                    <p class="fr">Séances par semaine</p>
+                    <p class="en">Sessions per week</p>
+                </article>
+                <article><small class="fr">DURÉE D'UNE SÉANCE</small><small class="en">SESSION LENGTH</small><b>90
+                        min</b>
+                    <p class="fr">En direct avec votre formateur</p>
+                    <p class="en">Live with your trainer</p>
+                </article>
+                <article><small class="fr">PACK MENSUEL</small><small class="en">MONTHLY PACKAGE</small><b>18 h</b>
+                    <p class="fr">12 séances sur 4 semaines</p>
+                    <p class="en">12 sessions over 4 weeks</p>
+                </article>
+            </div>
+            <div class="price-note fr"><strong>Conditions et transparence</strong><br>• Les prix sont par apprenant,
+                pour un accompagnement individuel.<br>• Paiement du pack avant le démarrage ; paiement mensuel possible
+                pour les programmes de plusieurs mois.<br>• Une remise de 5 % peut être appliquée au paiement intégral
+                anticipé du programme complet.<br>• Trainings en ligne au même tarif. Les déplacements pour le
+                présentiel hors zone habituelle sont convenus séparément.<br>• Les durées sont indicatives : le
+                programme final dépend de votre niveau, de vos objectifs et de votre rythme de pratique.</div>
+            <div class="price-note en"><strong>Terms and transparency</strong><br>• Prices are per learner for
+                one-to-one coaching.<br>• Monthly packages are paid before training begins; multi-month programmes can
+                be paid monthly.<br>• A 5% discount may apply when the full programme is paid upfront.<br>• Online
+                training is included at the same rate. Travel for in-person sessions outside the usual area is agreed
+                separately.<br>• Durations are indicative and depend on your level, goals and practice pace.</div>
+            <div class="price-cta">
+                <p class="fr"><strong>Vous avez un objectif précis ?</strong><br>Contactez MESSWAYS pour un training
+                    spécialisé. Nous confirmerons le contenu, le calendrier et le prix avant votre engagement.</p>
+                <p class="en"><strong>Have a specific goal?</strong><br>Contact MESSWAYS for specialised training. We
+                    will confirm the content, schedule and price before you commit.</p><a
+                    href="index.html#contact"><span class="fr">Décrire mon besoin ↗</span><span class="en">Tell us what
+                        you need ↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer><a class="logo inverse" href="index.html"><span
+                class="wordmark"><span>mess</span><b>ways</b></span></a><small class="fr">Notre façon de faire. Votre
+            savoir-faire.</small><small class="en">Our way of doing things. Your skills.</small>
+        <div><a href="index.html#contact">CONTACT</a><span>© MESSWAYS</span></div>
+    </footer>
+    <script>const btn = document.getElementById('lang'); let lang = 'fr'; btn.addEventListener('click', () => { lang = lang === 'fr' ? 'en' : 'fr'; document.body.classList.toggle('english', lang === 'en'); document.documentElement.lang = lang; btn.textContent = lang === 'fr' ? 'EN' : 'FR'; });</script>
+</body>
+
+</html>

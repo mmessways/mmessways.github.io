@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101010">
+    <title>Merci — MESSWAYS</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            min-height: 100vh;
+            background: #f4f3ef;
+            display: grid;
+            place-items: center
+        }
+
+        .thanks {
+            width: min(760px, 90vw);
+            background: #fff;
+            padding: clamp(32px, 7vw, 76px);
+            position: relative;
+            overflow: hidden
+        }
+
+        .thanks:after {
+            content: none
+        }
+
+        .thanks>* {
+            position: relative;
+            z-index: 1
+        }
+
+        .thanks .wordmark {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #111;
+            font: 800 27px/1 Manrope;
+            letter-spacing: -.09em
+        }
+
+        .thanks .wordmark b {
+            color: #d90018
+        }
+
+        .thanks h1 {
+            font: 800 clamp(44px, 8vw, 76px)/.95 Manrope;
+            letter-spacing: -.07em;
+            margin: 35px 0 18px
+        }
+
+        .thanks h1 em {
+            color: #d90018;
+            font-style: normal
+        }
+
+        .thanks p {
+            max-width: 540px;
+            color: #666;
+            line-height: 1.9;
+            font-size: 14px
+        }
+
+        .thanks .next {
+            margin: 30px 0;
+            padding: 22px;
+            background: #f5f4f1;
+            border-left: 3px solid #d90018
+        }
+
+        .thanks .next strong {
+            display: block;
+            margin-bottom: 8px
+        }
+
+        .thanks .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px
+        }
+
+        .thanks .blackbtn {
+            background: #111;
+            color: #fff;
+            padding: 16px 20px
+        }
+
+        .thanks .whatsappbtn {
+            background: #d90018;
+            color: #fff;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px
+        }
+
+        .thanks small {
+            color: #777;
+            letter-spacing: .12em;
+            font-size: 9px
+        }
+    </style>
+</head>
+
+<body>
+    <main class="thanks"><a class="wordmark" href="index.html" aria-label="MESSWAYS"><span>mess</span><b>ways</b></a>
+        <h1 id="title">Merci pour<br><em>votre confiance.</em></h1>
+        <p id="copy">Votre demande a bien été reçue. Nous allons examiner votre besoin de formation et vous contacter
+            pour convenir des prochaines étapes.</p>
+        <div class="next"><strong id="nextTitle">Et maintenant ?</strong><span id="nextCopy">Notre équipe prendra
+                connaissance de votre demande et reviendra vers vous.</span></div>
+        <div class="actions"><a class="blackbtn" href="index.html">Retour à l’accueil</a><a class="whatsappbtn"
+                id="thanksWhatsapp" href="https://wa.me/23054577976" target="_blank" rel="noopener">Continuer sur
+                WhatsApp ↗</a></div>
+        <p><small>MESSWAYS · NOTRE FAÇON DE FAIRE. VOTRE SAVOIR-FAIRE.</small></p>
+    </main>
+    <script>const p = new URLSearchParams(location.search), en = p.get('lang') === 'en'; const wa = document.getElementById('thanksWhatsapp'); if (wa) { const n = '23054577976'; const name = p.get('name') || ''; const course = p.get('course') || ''; const cc = p.get('countryCode') || ''; const phone = p.get('phone') || ''; const msg = en ? `Hello MESSWAYS, I have submitted an enquiry${name ? ' under the name ' + name : ''}${course ? ' about ' + course : ''}. My WhatsApp number is ${cc} ${phone}. I would like to continue our conversation.` : `Bonjour MESSWAYS, je viens d’envoyer une demande${name ? ' au nom de ' + name : ''}${course ? ' concernant ' + course : ''}. Mon numéro WhatsApp est ${cc} ${phone}. Je souhaite poursuivre notre échange.`; wa.href = `https://wa.me/${n}?text=${encodeURIComponent(msg)}`; } document.documentElement.lang = en ? 'en' : 'fr'; if (en) { document.title = 'Thank you — MESSWAYS'; document.getElementById('eyebrow').textContent = 'MESSWAYS · ENQUIRY RECEIVED'; document.getElementById('title').innerHTML = 'Thank you for<br><em>getting in touch.</em>'; document.getElementById('copy').textContent = 'Your enquiry has been received. We will review your training needs and contact you to discuss the next steps.'; document.getElementById('nextTitle').textContent = 'What happens next?'; document.getElementById('nextCopy').textContent = 'Our team will review your enquiry and get back to you.'; document.querySelector('.blackbtn').textContent = 'Back to homepage'; document.getElementById('thanksWhatsapp').textContent = 'Continue on WhatsApp ↗'; document.querySelector('.thanks>p small').textContent = 'MESSWAYS · OUR WAY OF DOING IT. YOUR WAY OF GROWING.'; }</script>
+</body>
+
+</html>
